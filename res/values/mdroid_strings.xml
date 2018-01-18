@@ -195,6 +195,8 @@
     <string name="lockscreen_battery_info_summary">Display negociated charger max current and voltage and battery temperature on lockscreen while charging</string>
 
     <string name="ambient_display_category">Ambient display options</string>
+    <string name="force_ambient_for_media_title">Show Ambient on new track</string>
+    <string name="force_ambient_for_media_summary">Show an Ambient Display notification when a new track is being played</string>
 
     <!-- Style -->
     <string name="style_title">Style</string>

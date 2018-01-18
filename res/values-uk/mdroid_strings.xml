@@ -195,6 +195,8 @@
     <string name="lockscreen_battery_info_summary">Відображення струму зарядки і вольтажу на заблокованому екрані</string>
 
     <string name="ambient_display_category">Налаштування Активації екрана</string>
+    <string name="force_ambient_for_media_title">Активація екрана при перемиканні музичного треку</string>
+    <string name="force_ambient_for_media_summary">Інформація про музичний трек на Активному екрані</string>
 
     <!-- Style -->
     <string name="style_title">Теми</string>
