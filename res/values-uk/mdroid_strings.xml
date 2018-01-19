@@ -196,7 +196,9 @@
 
     <string name="ambient_display_category">Налаштування Активації екрана</string>
     <string name="force_ambient_for_media_title">Активація екрана при перемиканні музичного треку</string>
-    <string name="force_ambient_for_media_summary">Інформація про музичний трек на Активному екрані</string>
+    <string name="force_ambient_for_media_off">Вимкнути</string>
+    <string name="force_ambient_for_media_on">Увімкнути</string>
+    <string name="force_ambient_for_media_on_clean">Увімкнути і сховати годинник</string>
 
     <!-- Style -->
     <string name="style_title">Теми</string>

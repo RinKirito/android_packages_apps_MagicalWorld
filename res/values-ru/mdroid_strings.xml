@@ -196,7 +196,9 @@
 
     <string name="ambient_display_category">Настройки Автоматич. включения экрана</string>
     <string name="force_ambient_for_media_title">Активация экрана при переключении музыкального трека</string>
-    <string name="force_ambient_for_media_summary">Информация о музыкальном треке на Активном экране</string>
+    <string name="force_ambient_for_media_off">Выключить</string>
+    <string name="force_ambient_for_media_on">Включить</string>
+    <string name="force_ambient_for_media_on_clean">Включить и скрыть часы</string>
 
     <!-- Style -->
     <string name="style_title">Темы</string>
