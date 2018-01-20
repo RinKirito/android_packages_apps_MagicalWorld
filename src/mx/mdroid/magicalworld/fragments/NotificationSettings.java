@@ -23,11 +23,9 @@ public class NotificationSettings extends SettingsPreferenceFragment
 
     private static final String INCALL_VIB_OPTIONS = "incall_vib_options";
     private static final String FLASHLIGHT_ON_CALL = "flashlight_on_call";
-    private static final String FORCE_AMBIENT_FOR_MEDIA = "force_ambient_for_media";
 
     private ListPreference mTickerMode;
     private ListPreference mFlashlightOnCall;
-    private ListPreference mAmbientTicker;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -61,13 +59,6 @@ public class NotificationSettings extends SettingsPreferenceFragment
         if (!Utils.deviceSupportsFlashLight(getActivity())) {
             prefScreen.removePreference(FlashOnCall);
         }
-
-        mAmbientTicker = (ListPreference) findPreference(FORCE_AMBIENT_FOR_MEDIA);
-        int mode = Settings.System.getIntForUser(resolver,
-                Settings.System.FORCE_AMBIENT_FOR_MEDIA, 0, UserHandle.USER_CURRENT);
-        mAmbientTicker.setValue(Integer.toString(mode));
-        mAmbientTicker.setSummary(mAmbientTicker.getEntry());
-        mAmbientTicker.setOnPreferenceChangeListener(this);
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -86,14 +77,6 @@ public class NotificationSettings extends SettingsPreferenceFragment
                     Settings.System.FLASHLIGHT_ON_CALL, flashlightValue);
             mFlashlightOnCall.setValue(String.valueOf(flashlightValue));
             mFlashlightOnCall.setSummary(mFlashlightOnCall.getEntry());
-            return true;
-        } else if (preference == mAmbientTicker) {
-            int mode = Integer.valueOf((String) newValue);
-            int index = mAmbientTicker.findIndexOfValue((String) newValue);
-            mAmbientTicker.setSummary(
-                    mAmbientTicker.getEntries()[index]);
-            Settings.System.putIntForUser(resolver, Settings.System.FORCE_AMBIENT_FOR_MEDIA,
-                    mode, UserHandle.USER_CURRENT);
             return true;
         }
         return false;
