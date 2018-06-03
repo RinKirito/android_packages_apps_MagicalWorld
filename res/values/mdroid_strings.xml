@@ -704,6 +704,10 @@
     <string name="blur_cat_notice_summary">Blur personalizations are disabled during Keyguard view! Only Translucent Notifications are enabled!</string>
     <string name="reset_message">Reset all entries to default?</string>
 
+    <!-- Notification count -->
+    <string name="status_bar_notif_count_title">Show notification count</string>
+    <string name="status_bar_notif_count_summary">Display the number of pending notifications</string>
+
 </resources>
 
 

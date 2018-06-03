@@ -704,4 +704,8 @@
     <string name="blur_cat_notice_summary">Розмиття вимкнено під час перегляду на екрані блокування! Працюють тільки напівпрозорі сповіщення!</string>
     <string name="reset_message">Скинути все до значень за замовчуванням?</string>
 
+    <!-- Notification count -->
+    <string name="status_bar_notif_count_title">Лічильник сповіщень</string>
+    <string name="status_bar_notif_count_summary">Показувати кількість нових сповіщень у рядку стану</string>
+
 </resources>

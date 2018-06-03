@@ -704,4 +704,8 @@
     <string name="blur_cat_notice_summary">Размытие отключено во время просмотра на экране блокировки! Работают только полупрозрачные уведомления!</string>
     <string name="reset_message">Сбросить все до значений по умолчанию?</string>
 
+    <!-- Notification count -->
+    <string name="status_bar_notif_count_title">Счетчик уведомлений</string>
+    <string name="status_bar_notif_count_summary">Показывать количество новых уведомлений в строке состояния</string>
+
 </resources>
