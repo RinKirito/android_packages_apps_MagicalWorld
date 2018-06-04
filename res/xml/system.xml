@@ -44,6 +44,12 @@
         android:entries="@array/screen_off_animation_entries"
         android:entryValues="@array/screen_off_animation_values" />
 
+    <Preference
+        android:key="blur_cat"
+        android:title="@string/settings_blur_cat"
+        android:summary="@string/settings_blur_sum"
+        android:fragment="mx.mdroid.magicalworld.fragments.BlurPersonalizations" />
+
     <mx.mdroid.magicalworld.preferences.GlobalSettingSwitchPreference
         android:key="wake_when_plugged_or_unplugged"
         android:title="@string/wakeup_when_plugged_unplugged_title"
