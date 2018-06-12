@@ -201,7 +201,6 @@
     <string name="force_ambient_for_media_title">Выбор режима отображения</string>
     <string name="force_ambient_for_media_off">Отключено</string>
     <string name="force_ambient_for_media_on">Обычный</string>
-    <string name="force_ambient_for_media_on_forced">Обычный (принудительно)</string>
     <string name="force_ambient_for_media_on_forced_clean">Минимальный (принудительно)</string>
 
     <!-- Style -->

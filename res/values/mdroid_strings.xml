@@ -201,7 +201,6 @@
     <string name="force_ambient_for_media_title">Select layout</string>
     <string name="force_ambient_for_media_off">Disabled</string>
     <string name="force_ambient_for_media_on">Normal</string>
-    <string name="force_ambient_for_media_on_forced">Normal (forced)</string>
     <string name="force_ambient_for_media_on_forced_clean">Minimal (forced)</string>
 
     <!-- Style -->
