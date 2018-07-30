@@ -664,4 +664,8 @@
     <string name="reboot_now">Перезагрузить сейчас</string>
     <string name="reboot_later">Перезагрузить позже</string>
 
+    <!-- QS Tile Theme/Tinting -->
+    <string name="qs_tile_theme_title">Цвет акцента плиток быстрых настроек</string>
+    <string name="qs_tile_theme_summary">Для плиток и подписей быстрых настроек будет использоваться системный цвет акцента</string>
+
 </resources>

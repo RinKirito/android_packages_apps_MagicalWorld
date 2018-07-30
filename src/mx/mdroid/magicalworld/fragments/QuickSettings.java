@@ -24,7 +24,9 @@ import android.view.View;
 import java.util.List;
 import java.util.ArrayList;
 
+import com.android.internal.util.mdroid.MDroidUtils;
 import mx.mdroid.magicalworld.preferences.CustomSeekBarPreference;
+import mx.mdroid.magicalworld.preferences.SystemSettingSwitchPreference;
 
 public class QuickSettings extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener {
@@ -32,10 +34,12 @@ public class QuickSettings extends SettingsPreferenceFragment implements
     private static final String QS_PANEL_ALPHA = "qs_panel_alpha";
     private static final String QUICK_PULLDOWN = "quick_pulldown";
     private static final String PREF_SMART_PULLDOWN = "smart_pulldown";
+    private static final String QS_TILE_TINTING = "qs_tile_tinting_enable";
 
     private CustomSeekBarPreference mQsPanelAlpha;
     private ListPreference mQuickPulldown;
     ListPreference mSmartPulldown;
+    private SwitchPreference mEnableQsTileTinting;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -65,6 +69,12 @@ public class QuickSettings extends SettingsPreferenceFragment implements
                 Settings.System.QS_SMART_PULLDOWN, 0);
         mSmartPulldown.setValue(String.valueOf(smartPulldown));
         updateSmartPulldownSummary(smartPulldown);
+
+        //QS Tile Theme
+        mEnableQsTileTinting = (SwitchPreference) findPreference(QS_TILE_TINTING);
+        mEnableQsTileTinting.setChecked(Settings.System.getInt(resolver,
+                Settings.System.QS_TILE_TINTING_ENABLE, 0) != 0);
+        mEnableQsTileTinting.setOnPreferenceChangeListener(this);
     }
 
     private void updatePulldownSummary(int value) {
@@ -119,6 +129,12 @@ public class QuickSettings extends SettingsPreferenceFragment implements
             int smartPulldown = Integer.valueOf((String) newValue);
             Settings.System.putInt(resolver, Settings.System.QS_SMART_PULLDOWN, smartPulldown);
             updateSmartPulldownSummary(smartPulldown);
+            return true;
+        } else if (preference == mEnableQsTileTinting) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(resolver,
+                    Settings.System.QS_TILE_TINTING_ENABLE, value ? 1 : 0);
+            MDroidUtils.restartSystemUi(getContext());
             return true;
         }
         return false;

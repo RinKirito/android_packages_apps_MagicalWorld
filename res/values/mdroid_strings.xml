@@ -664,6 +664,10 @@
     <string name="reboot_now">Reboot now</string>
     <string name="reboot_later">Reboot later</string>
 
+    <!-- QS Tile Theme/Tinting -->
+    <string name="qs_tile_theme_title">QS Tile Accents</string>
+    <string name="qs_tile_theme_summary">It will enable Device Accent on QS Tiles n Titles</string>
+
 </resources>
 
 
