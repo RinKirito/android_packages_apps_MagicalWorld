@@ -328,8 +328,12 @@
     <string name="brightness_icon_summary">Show a brightness icon to the right of the brighness slider to adjust autobrightness</string>
 
     <!-- Lockscreen visualizer -->
-    <string name="lockscreen_visualizer_title">Lockscreen visualizer</string>
-    <string name="lockscreen_visualizer_summary">Displays a live design on lockscreen while music is playing</string>
+    <string name="lockscreen_visualizer_category">Visualizer</string>
+    <string name="lockscreen_visualizer_enable">Enable lockscreen visualizer</string>
+    <string name="lockscreen_visualizer_enable_summary">Show visualizer on lockscreen when music is playing</string>
+    <string name="lockscreen_visualizer_enable_custom">Use custom color</string>
+    <string name="lockscreen_visualizer_enable_custom_summary">Use a preset color instead of the generated color</string>
+    <string name="lockscreen_visualizer_custom_color">Visualizer Color</string>
 
     <!-- Suspend actions -->
     <string name="screen_state_toggles_title">Suspend actions</string>

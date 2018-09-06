@@ -328,8 +328,12 @@
     <string name="brightness_icon_summary">Показать значок включения автояркости справа от регулятора</string>
 
     <!-- Lockscreen visualizer -->
-    <string name="lockscreen_visualizer_title">Визуализатор музыки</string>
-    <string name="lockscreen_visualizer_summary">Отображение визуализатора на экране блокировки во время воспроизведения музыки</string>
+    <string name="lockscreen_visualizer_category">Визуализатор</string>
+    <string name="lockscreen_visualizer_enable">Включить на экране блокировки</string>
+    <string name="lockscreen_visualizer_enable_summary">Показывать визуализацию музыки на экране блокировки во время воспроизведения</string>
+    <string name="lockscreen_visualizer_enable_custom">Настроить цвет</string>
+    <string name="lockscreen_visualizer_enable_custom_summary">Использовать свой цвет вместо сгенерированного</string>
+    <string name="lockscreen_visualizer_custom_color">Цвет визуализатора</string>
 
     <!-- Suspend actions -->
     <string name="screen_state_toggles_title">Действия в режиме ожидания</string>

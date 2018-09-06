@@ -328,8 +328,12 @@
     <string name="brightness_icon_summary">Показати значок ввімкнення автояскравості праворуч від регулятора</string>
 
     <!-- Lockscreen visualizer -->
-    <string name="lockscreen_visualizer_title">Візуалізатор музики</string>
-    <string name="lockscreen_visualizer_summary">Відображення візуалізатора на екрані блокування під час відтворення музики</string>
+    <string name="lockscreen_visualizer_category">Візуалізатор</string>
+    <string name="lockscreen_visualizer_enable">Увімкнути на екрані блокування</string>
+    <string name="lockscreen_visualizer_enable_summary">Показувати візуализацію музики на екрані блокування під час відтворення</string>
+    <string name="lockscreen_visualizer_enable_custom">Налаштувати колір</string>
+    <string name="lockscreen_visualizer_enable_custom_summary">Використовувати свій колір замість сгенерованого</string>
+    <string name="lockscreen_visualizer_custom_color">Колір візуалізатора</string>
 
     <!-- Suspend actions -->
     <string name="screen_state_toggles_title">Дії в режимі очікування</string>
