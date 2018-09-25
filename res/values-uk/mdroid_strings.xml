@@ -640,4 +640,8 @@
     <string name="custom_seekbar_default_value_to_set">Значення за замовчуванням: <xliff:g id="v">%s</xliff:g>\nДовгий тап для встановлення</string>
     <string name="custom_seekbar_default_value_is_set">Значення за замовчуванням встановлено</string>
 
+    <!-- Allow fake signature -->
+    <string name="allow_signature_fake">Дозволити підміну підпису</string>
+    <string name="allow_signature_fake_summary">Дозволяти додаткам обходити систему безпеки, видаючи себе за інший додаток</string>
+
 </resources>
