@@ -77,8 +77,15 @@ public class StylePreferences extends SettingsPreferenceFragment {
     private static final int INDEX_DARK = 3;
     private static final int INDEX_BLACK = 4;
 
+    private static final int INDEX_NOTIFICATION_THEME = 0;
+    private static final int INDEX_NOTIFICATION_LIGHT = 1;
+    private static final int INDEX_NOTIFICATION_DARK = 2;
+    private static final int INDEX_NOTIFICATION_BLACK = 3;
+    private static final String NOTIFICATION_STYLE = "notification_style";
+
     private Preference mStylePref;
     private Preference mAccentPref;
+    private ListPreference mNotificationStyle;
 
     private List<Accent> mAccents;
 
@@ -92,9 +99,20 @@ public class StylePreferences extends SettingsPreferenceFragment {
 
         addPreferencesFromResource(R.xml.style);
 
+        ContentResolver resolver = getActivity().getContentResolver();
+
         mStylePref = findPreference("theme_global_style");
         mStylePref.setOnPreferenceChangeListener(this::onStyleChange);
         setupStylePref();
+
+        mNotificationStyle = (ListPreference) findPreference(NOTIFICATION_STYLE);
+        int notificationStyle = Settings.System.getInt(resolver,
+                Settings.System.NOTIFICATION_STYLE, 0);
+        int valueIndex = mNotificationStyle.findIndexOfValue(String.valueOf(notificationStyle));
+        mNotificationStyle.setValueIndex(valueIndex >= 0 ? valueIndex : 0);
+        mNotificationStyle.setSummary(mNotificationStyle.getEntry());
+        mNotificationStyle.setOnPreferenceChangeListener(this::onNotificationStyleChange);
+        setupNotificatioStylePref();
 
         mAccents = AccentUtils.getAccents(getContext(), mStyleStatus);
         mAccentPref = findPreference("style_accent");
@@ -106,8 +124,6 @@ public class StylePreferences extends SettingsPreferenceFragment {
 
         Preference restart = findPreference("restart_systemui");
         restart.setOnPreferenceClickListener(p -> restartUi());
-
-        ContentResolver resolver = getActivity().getContentResolver();
     }
 
     private boolean onAccentClick(Preference preference) {
@@ -212,11 +228,19 @@ public class StylePreferences extends SettingsPreferenceFragment {
         }
     }
 
+    private void setupNotificatioStylePref() {
+        int preference = Settings.System.getInt(getContext().getContentResolver(),
+                Settings.System.NOTIFICATION_STYLE, 0);
+
+        setNotificationStyleIcon(preference);
+    }
+
     private void applyStyle(Style style) {
         int value = style.isLight() ? INDEX_LIGHT : INDEX_DARK;
 
         onStyleChange(mStylePref, value);
         onAccentSelected(style.getAccent());
+        onNotificationStyleChange(mStylePref, value);
     }
 
     private boolean onStyleChange(Preference preference, Object newValue) {
@@ -255,6 +279,37 @@ public class StylePreferences extends SettingsPreferenceFragment {
                 Settings.System.THEME_GLOBAL_STYLE, value);
 
         setupStylePref();
+        return true;
+    }
+
+    private boolean onNotificationStyleChange(Preference preference, Object newValue) {
+        Integer value;
+        if (newValue instanceof String) {
+            value = Integer.valueOf((String) newValue);
+        } else if (newValue instanceof Integer) {
+            value = (Integer) newValue;
+        } else {
+            return false;
+        }
+
+        int oldValue = Settings.System.getInt(getContext().getContentResolver(),
+            Settings.System.NOTIFICATION_STYLE, 0);
+
+        if (oldValue != value){
+            try {
+                reload();
+            }catch (Exception ignored){
+            }
+        }
+
+        Settings.System.putInt(getContext().getContentResolver(),
+                Settings.System.NOTIFICATION_STYLE, value);
+
+		String style = (String) newValue;
+		int valueIndex = mNotificationStyle.findIndexOfValue(style);
+        mNotificationStyle.setSummary(mNotificationStyle.getEntries()[valueIndex]);
+
+        setupNotificatioStylePref();
         return true;
     }
 
@@ -301,6 +356,26 @@ public class StylePreferences extends SettingsPreferenceFragment {
         }
 
         mStylePref.setIcon(icon);
+    }
+
+    private void setNotificationStyleIcon(int value) {
+        int icon;
+        switch (value) {
+            case INDEX_NOTIFICATION_LIGHT:
+                icon = R.drawable.ic_style_light;
+                break;
+            case INDEX_NOTIFICATION_DARK:
+                icon = R.drawable.ic_style_dark;
+                break;
+            case INDEX_NOTIFICATION_BLACK:
+                icon = R.drawable.ic_style_black;
+                break;
+            default:
+                icon = R.drawable.ic_style_auto;
+                break;
+        }
+
+        mNotificationStyle.setIcon(icon);
     }
 
     private boolean checkAccentCompatibility(int value) {

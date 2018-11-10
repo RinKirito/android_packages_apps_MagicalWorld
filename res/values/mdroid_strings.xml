@@ -225,6 +225,13 @@
     <string name="theme_applied_toast">Theme applied.</string>
     <string name="applying_theme_toast">Applying theme, please wait...</string>
 
+    <!-- Notification styles -->
+    <string name="notification_style_title">Notification color</string>
+    <string name="notification_auto">Automatic (Theme based)</string>
+    <string name="notification_light">Light</string>
+    <string name="notification_dark">Dark</string>
+    <string name="notification_black">Black</string>
+
     <!-- QS rows and columns -->
     <string name="qs_rows_columns_title">QS rows and columns</string>
     <string name="qs_rows_portrait_title">Tiles rows on portrait</string>

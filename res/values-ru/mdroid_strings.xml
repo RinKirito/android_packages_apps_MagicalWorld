@@ -225,6 +225,13 @@
     <string name="theme_applied_toast">Тема применена.</string>
     <string name="applying_theme_toast">Применение темы, подождите...</string>
 
+    <!-- Notification styles -->
+    <string name="notification_style_title">Цвет уведомлений</string>
+    <string name="notification_auto">Автоматически (тема)</string>
+    <string name="notification_light">Светлый</string>
+    <string name="notification_dark">Темный</string>
+    <string name="notification_black">Черный</string>
+
     <!-- QS rows and columns -->
     <string name="qs_rows_columns_title">Строки и столбцы</string>
     <string name="qs_rows_portrait_title">Количество строк (портрет.)</string>

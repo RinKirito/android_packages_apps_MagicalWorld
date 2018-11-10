@@ -25,6 +25,14 @@
         android:icon="@drawable/ic_style_auto"
         android:title="@string/style_global_title" />
 
+	<ListPreference
+        android:key="notification_style"
+        android:icon="@drawable/ic_style_auto"
+        android:title="@string/notification_style_title"
+        android:persistent="false"
+        android:entries="@array/notification_style_entries"
+        android:entryValues="@array/notification_style_values" />
+
     <Preference
         android:key="style_accent"
         android:title="@string/style_accent_title" />
