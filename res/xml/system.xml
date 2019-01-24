@@ -109,13 +109,6 @@
         android:entries="@array/entries_scrollingcache"
         android:entryValues="@array/values_scrollingcache" />
 
-    <!-- Signature Spoofing -->
-    <mx.mdroid.magicalworld.preferences.GlobalSettingSwitchPreference
-        android:key="allow_signature_fake"
-        android:title="@string/allow_signature_fake"
-        android:summary="@string/allow_signature_fake_summary"
-        android:defaultValue="false" />
-
     <Preference
         android:key="chooser_activity_blacklist"
         android:fragment="mx.mdroid.magicalworld.fragments.ChooserActivityBlacklist"
