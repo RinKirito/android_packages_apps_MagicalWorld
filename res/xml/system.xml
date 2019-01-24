@@ -114,7 +114,7 @@
         android:key="allow_signature_fake"
         android:title="@string/allow_signature_fake"
         android:summary="@string/allow_signature_fake_summary"
-        android:defaultValue="true" />
+        android:defaultValue="false" />
 
     <Preference
         android:key="chooser_activity_blacklist"
