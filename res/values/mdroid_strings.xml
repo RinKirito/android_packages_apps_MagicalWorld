@@ -640,6 +640,10 @@
     <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong tap to set</string>
     <string name="custom_seekbar_default_value_is_set">Default value is set</string>
 
+    <string name="pref_longpress_delay_title">Longpress delay</string>
+    <string name="pref_longpress_delay_dialog_title">Longpress delay (ms)</string>
+    <string name="pref_longpress_delay_summary">Reboot is required</string>
+
 </resources>
 
 

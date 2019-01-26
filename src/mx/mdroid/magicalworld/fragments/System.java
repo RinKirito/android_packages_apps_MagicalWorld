@@ -52,10 +52,15 @@ public class System extends SettingsPreferenceFragment implements
     private static final String SCROLLINGCACHE_PERSIST_PROP = "persist.sys.scrollingcache";
     private static final String SCROLLINGCACHE_DEFAULT = "1";
 
+    private static final String LONGPRESS_DELAY = "pref_longpress_delay";
+    private static final String LONGPRESS_DELAY_PROP = "persist.sys.longpress.delay";
+    private static final String LONGPRESS_DELAY_DEFAULT = "0";
+
     private ListPreference mScreenOffAnimation;
     private ListPreference mHeadsetRingtoneFocus;
     private CustomSeekBarPreference mScreenshotDelay;
     private ListPreference mScrollingCachePref;
+    private ListPreference mLongpressDelayPref;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -89,6 +94,11 @@ public class System extends SettingsPreferenceFragment implements
         mScrollingCachePref.setValue(SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP,
                 SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP, SCROLLINGCACHE_DEFAULT)));
         mScrollingCachePref.setOnPreferenceChangeListener(this);
+
+        mLongpressDelayPref = (ListPreference) findPreference(LONGPRESS_DELAY);
+        mLongpressDelayPref.setValue(SystemProperties.get(LONGPRESS_DELAY_PROP,
+                SystemProperties.get(LONGPRESS_DELAY_PROP, LONGPRESS_DELAY_DEFAULT)));
+        mLongpressDelayPref.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -133,6 +143,11 @@ public class System extends SettingsPreferenceFragment implements
         } else if (preference == mScrollingCachePref) {
             if (objValue != null) {
                 SystemProperties.set(SCROLLINGCACHE_PERSIST_PROP, (String) objValue);
+            }
+            return true;
+        } else if (preference == mLongpressDelayPref) {
+            if (objValue != null) {
+                SystemProperties.set(LONGPRESS_DELAY_PROP, (String) objValue);
             }
             return true;
         }

@@ -640,4 +640,8 @@
     <string name="custom_seekbar_default_value_to_set">Значение по умолчанию: <xliff:g id="v">%s</xliff:g>\nДолгий тап для установки</string>
     <string name="custom_seekbar_default_value_is_set">Значение по умолчанию установлено</string>
 
+    <string name="pref_longpress_delay_title">Таймаут долгого нажатия</string>
+    <string name="pref_longpress_delay_dialog_title">Таймаут долгого нажатия (мс)</string>
+    <string name="pref_longpress_delay_summary">Требуется перезагрузка</string>
+
 </resources>
