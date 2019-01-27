@@ -527,10 +527,10 @@
     </string-array>
 
     <string-array name="longpress_delay_entries">
-        <item>250</item>
-        <item>500</item>
-        <item>1000</item>
-        <item>1500</item>
+        <item>@string/pref_longpress_delay_250</item>
+        <item>@string/pref_longpress_delay_500</item>
+        <item>@string/pref_longpress_delay_1000</item>
+        <item>@string/pref_longpress_delay_1500</item>
     </string-array>
 
     <string-array name="longpress_delay_values" translatable="false">

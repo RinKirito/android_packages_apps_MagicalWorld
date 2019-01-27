@@ -16,6 +16,8 @@
 
 package mx.mdroid.magicalworld.fragments;
 
+import android.app.DialogFragment;
+import android.app.FragmentManager;
 import android.content.Context;
 import android.content.ContentResolver;
 import android.content.res.Configuration;
@@ -62,6 +64,8 @@ public class System extends SettingsPreferenceFragment implements
     private ListPreference mScrollingCachePref;
     private ListPreference mLongpressDelayPref;
 
+    private static FragmentManager mFragmentManager;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,6 +73,8 @@ public class System extends SettingsPreferenceFragment implements
         addPreferencesFromResource(R.xml.system);
 
         ContentResolver resolver = getActivity().getContentResolver();
+
+        mFragmentManager = getFragmentManager();
 
         mScreenOffAnimation = (ListPreference) findPreference(SCREEN_OFF_ANIMATION);
         int screenOffStyle = Settings.System.getInt(resolver,
@@ -98,6 +104,7 @@ public class System extends SettingsPreferenceFragment implements
         mLongpressDelayPref = (ListPreference) findPreference(LONGPRESS_DELAY);
         mLongpressDelayPref.setValue(SystemProperties.get(LONGPRESS_DELAY_PROP,
                 SystemProperties.get(LONGPRESS_DELAY_PROP, LONGPRESS_DELAY_DEFAULT)));
+        mLongpressDelayPref.setSummary(mLongpressDelayPref.getEntry());
         mLongpressDelayPref.setOnPreferenceChangeListener(this);
     }
 
@@ -149,9 +156,16 @@ public class System extends SettingsPreferenceFragment implements
             if (objValue != null) {
                 SystemProperties.set(LONGPRESS_DELAY_PROP, (String) objValue);
             }
+            int valueIndex = mLongpressDelayPref.findIndexOfValue((String) objValue);
+            mLongpressDelayPref.setSummary(mLongpressDelayPref.getEntries()[valueIndex]);
+            confirmRebootChange();
             return true;
         }
         return false;
     }
 
+    private static void confirmRebootChange() {
+        DialogFragment newFragment = new confirmRebootChangeDialog();
+        newFragment.show(mFragmentManager, "reboot");
+    }
 }

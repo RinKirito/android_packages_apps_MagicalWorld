@@ -641,8 +641,15 @@
     <string name="custom_seekbar_default_value_is_set">Default value is set</string>
 
     <string name="pref_longpress_delay_title">Longpress delay</string>
-    <string name="pref_longpress_delay_dialog_title">Longpress delay (ms)</string>
-    <string name="pref_longpress_delay_summary">Reboot is required</string>
+    <string name="pref_longpress_delay_250">250 ms</string>
+    <string name="pref_longpress_delay_500">500 ms</string>
+    <string name="pref_longpress_delay_1000">1000 ms</string>
+    <string name="pref_longpress_delay_1500">1500 ms</string>
+
+    <string name="dialog_reboot_required">Reboot required</string>
+    <string name="dialog_reboot_required_summary">A reboot is required for the changes to take effect!</string>
+    <string name="reboot_now">Reboot now</string>
+    <string name="reboot_later">Reboot later</string>
 
 </resources>
 

@@ -641,7 +641,14 @@
     <string name="custom_seekbar_default_value_is_set">Значення за замовчуванням встановлено</string>
 
     <string name="pref_longpress_delay_title">Таймаут довгого натискання</string>
-    <string name="pref_longpress_delay_dialog_title">Таймаут довгого натискання (мс)</string>
-    <string name="pref_longpress_delay_summary">Потрібне перезавантаження</string>
+    <string name="pref_longpress_delay_250">250 мс</string>
+    <string name="pref_longpress_delay_500">500 мс</string>
+    <string name="pref_longpress_delay_1000">1000 мс</string>
+    <string name="pref_longpress_delay_1500">1500 мс</string>
+
+    <string name="dialog_reboot_required">Потрібне перезавантаження</string>
+    <string name="dialog_reboot_required_summary">Перезавантаження необхідне для того, щоб зміни набрали сили!</string>
+    <string name="reboot_now">Перезавантажити зараз</string>
+    <string name="reboot_later">Перезавантажити пізніше</string>
 
 </resources>
