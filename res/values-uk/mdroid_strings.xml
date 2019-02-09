@@ -194,16 +194,7 @@
     <string name="lockscreen_battery_info_title">Інформація про зарядку на екрані блокування</string>
     <string name="lockscreen_battery_info_summary">Відображення струму зарядки і вольтажу на заблокованому екрані</string>
 
-    <!-- Ambient music -->
     <string name="ambient_display_category">Налаштування Активації екрана</string>
-    <string name="force_ambient_for_media_pref_title">Інформація про поточну музичну композицію при активації екрана</string>
-    <string name="force_ambient_for_media_pref_summary">Налаштування відображення інформації про поточну музичну композицію при активації екрана</string>
-    <string name="ambient_ticker_footer">Ця функція дозволяє відображати інформацію про поточну музичну композицію на екрані блокування з увімкнутою активацією екрана або без неї.\n\nВи можете вибрати з двох варіантів відображення, звичайного і мінімального. Хоча ця функція використовує активацію екрана, вона не залежить від неї. Вона може працювати без увімкнення активації екрана за допомогою примусового режиму.\n\nЗвичайний вигляд включає в себе годинник, дату та інформацію про музичну композицію.\n\nМінімальний вигляд містить лише інформацію про музичну композицію у центрі екрана.</string>
-    <string name="force_ambient_for_media_title">Режим відображення</string>
-    <string name="force_ambient_for_media_off">Вимкнуто</string>
-    <string name="force_ambient_for_media_on">Звичайний</string>
-    <string name="force_ambient_for_media_on_forced">Звичайний (примусово)</string>
-    <string name="force_ambient_for_media_on_forced_clean">Мінімальний (примусово)</string>
 
     <!-- Style -->
     <string name="style_title">Теми</string>

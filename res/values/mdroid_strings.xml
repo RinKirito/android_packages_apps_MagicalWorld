@@ -194,16 +194,7 @@
     <string name="lockscreen_battery_info_title">Lockscreen charging info</string>
     <string name="lockscreen_battery_info_summary">Display negociated charger max current and voltage and battery temperature on lockscreen while charging</string>
 
-    <!-- Ambient music -->
     <string name="ambient_display_category">Ambient display options</string>
-    <string name="force_ambient_for_media_pref_title">Now playing</string>
-    <string name="force_ambient_for_media_pref_summary">Show current music track information</string>
-    <string name="ambient_ticker_footer">This feature allows for the ability to show the current music track info on the lockscreen with or without Ambient display enabled.\n\nYou can select from two layouts, normal and minimal. While this feature takes advantage of ambient display, it does not depend on it. It can be triggered without having ambient display enabled by using the (forced) options.\n\nNormal view includes the lockscreen clock, date and music information.\n\nMinimal view includes just the music information at the center of the screen.</string>
-    <string name="force_ambient_for_media_title">Select layout</string>
-    <string name="force_ambient_for_media_off">Disabled</string>
-    <string name="force_ambient_for_media_on">Normal</string>
-    <string name="force_ambient_for_media_on_forced">Normal (forced)</string>
-    <string name="force_ambient_for_media_on_forced_clean">Minimal (forced)</string>
 
     <!-- Style -->
     <string name="style_title">Style</string>
