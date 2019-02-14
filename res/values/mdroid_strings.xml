@@ -645,8 +645,12 @@
     <string name="pref_longpress_delay_title">Longpress delay</string>
     <string name="pref_longpress_delay_250">250 ms</string>
     <string name="pref_longpress_delay_500">500 ms</string>
+    <string name="pref_longpress_delay_750">750 ms</string>
     <string name="pref_longpress_delay_1000">1000 ms</string>
+    <string name="pref_longpress_delay_1250">1250 ms</string>
     <string name="pref_longpress_delay_1500">1500 ms</string>
+    <string name="pref_longpress_delay_1750">1750 ms</string>
+    <string name="pref_longpress_delay_2000">2000 ms</string>
 
     <string name="dialog_reboot_required">Reboot required</string>
     <string name="dialog_reboot_required_summary">A reboot is required for the changes to take effect!</string>

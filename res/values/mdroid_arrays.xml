@@ -514,15 +514,23 @@
     <string-array name="longpress_delay_entries">
         <item>@string/pref_longpress_delay_250</item>
         <item>@string/pref_longpress_delay_500</item>
+        <item>@string/pref_longpress_delay_750</item>
         <item>@string/pref_longpress_delay_1000</item>
+        <item>@string/pref_longpress_delay_1250</item>
         <item>@string/pref_longpress_delay_1500</item>
+        <item>@string/pref_longpress_delay_1750</item>
+        <item>@string/pref_longpress_delay_2000</item>
     </string-array>
 
     <string-array name="longpress_delay_values" translatable="false">
         <item>0</item>
         <item>250</item>
+        <item>500</item>
         <item>750</item>
+        <item>1000</item>
         <item>1250</item>
+        <item>1500</item>
+        <item>1750</item>
     </string-array>
 
     <string-array name="force_ambient_for_media_entries">
