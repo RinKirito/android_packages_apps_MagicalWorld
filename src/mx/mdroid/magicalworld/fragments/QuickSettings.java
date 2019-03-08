@@ -134,7 +134,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements
             boolean value = (Boolean) newValue;
             Settings.System.putInt(resolver,
                     Settings.System.QS_TILE_TINTING_ENABLE, value ? 1 : 0);
-            MDroidUtils.restartSystemUi(getContext());
+            MDroidUtils.showSystemUiRestartDialog(getContext());
             return true;
         }
         return false;
