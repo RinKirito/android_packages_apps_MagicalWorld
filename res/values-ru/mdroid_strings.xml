@@ -668,4 +668,7 @@
     <string name="qs_tile_theme_title">Цвет акцента плиток быстрых настроек</string>
     <string name="qs_tile_theme_summary">Для плиток и подписей быстрых настроек будет использоваться системный цвет акцента</string>
 
+    <string name="enable_home_key_when_ringing_title">Включить кнопку \"Домой\" во время звонка</string>
+    <string name="enable_home_key_when_ringing_summary">Разрешить использовать кнопку \"Домой\", когда активен входящий звонок</string>
+
 </resources>

@@ -175,6 +175,12 @@
             android:summary="@string/home_answer_call_summary"
             android:persistent="false"/>
 
+        <mx.mdroid.magicalworld.preferences.SystemSettingSwitchPreference
+            android:key="enable_home_key_when_ringing"
+            android:title="@string/enable_home_key_when_ringing_title"
+            android:summary="@string/enable_home_key_when_ringing_summary"
+            android:defaultValue="false" />
+
         <mx.mdroid.magicalworld.preference.ActionPreference
             android:key="hwkeys_button_home_single_tap"
             android:summary="@string/hardware_keys_single_tap_summary"
