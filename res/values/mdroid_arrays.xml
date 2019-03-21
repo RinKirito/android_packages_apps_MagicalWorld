@@ -252,6 +252,7 @@
     <!-- Supported accent packages -->
     <string-array name="accent_packages" translatable="false">
         <item>mx.mdroid.accent.red</item>
+        <item>mx.mdroid.accent.netflix</item>
         <item>mx.mdroid.accent.pink</item>
         <item>mx.mdroid.accent.purple</item>
         <item>mx.mdroid.accent.purple_deep</item>
